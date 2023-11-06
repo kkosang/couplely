@@ -15,11 +15,11 @@ class _FirstPageState extends State<FirstPage> {
         child: Column(
           children: [
             Container(
-              color: Colors.grey,
+              color: Colors.grey.shade800,
               height: MediaQuery.of(context).size.height * 1 / 9,
             ),
             Container(
-              color: Colors.grey,
+              color: Colors.grey.shade800,
               width: MediaQuery.of(context).size.height,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -43,7 +43,7 @@ class _FirstPageState extends State<FirstPage> {
               ),
             ),
             Container(
-              color: Colors.grey,
+              color: Colors.grey.shade800,
               child: Container(
                 height: MediaQuery.of(context).size.height * 1 / 9,
                 decoration: BoxDecoration(
@@ -69,19 +69,22 @@ class _FirstPageState extends State<FirstPage> {
         top: MediaQuery.of(context).size.height * 3 / 10,
         right: MediaQuery.of(context).size.width * 1 / 10,
         bottom: MediaQuery.of(context).size.height * 1 / 10,
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius:
-                  BorderRadius.vertical(bottom: Radius.circular(300))),
-          child: ClipRRect(
-              borderRadius: BorderRadius.vertical(bottom: Radius.circular(300)),
-              child: Image.network(
-                'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996A953A5A4335EA24',
-                fit: BoxFit.cover,
-              )),
+        child: Material(elevation: 10,
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(300)),
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius:
+                    BorderRadius.vertical(bottom: Radius.circular(300))),
+            child: ClipRRect(
+                borderRadius: BorderRadius.vertical(bottom: Radius.circular(300)),
+                child: Image.network(
+                  'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996A953A5A4335EA24',
+                  fit: BoxFit.cover,
+                )),
+          ),
         ),
       ),
       Positioned(
