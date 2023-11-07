@@ -1,3 +1,4 @@
+import 'package:couplely/view/home_pages/BottomSheet.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -22,7 +23,7 @@ class _CalendarPageState extends State<CalendarPage> {
             children: [
               Container(
                 color: Colors.grey.shade800,
-                height: MediaQuery.of(context).size.height * 1 / 7,
+                height: MediaQuery.of(context).size.height * 0.15,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Row(
@@ -50,7 +51,7 @@ class _CalendarPageState extends State<CalendarPage> {
               Container(
                 color: Colors.grey.shade800,
                 child: Container(
-                  height: MediaQuery.of(context).size.height,
+                  height: MediaQuery.of(context).size.height*0.7,
                   decoration: BoxDecoration(
                       color: Colors.orange[50],
                       borderRadius:
@@ -82,21 +83,7 @@ class _CalendarPageState extends State<CalendarPage> {
             ],
           ),
         ),
-        Positioned(
-          top: MediaQuery.of(context).size.height * 3 / 5,
-          child: Material(
-            elevation: 10,
-            borderRadius: BorderRadius.vertical(top: Radius.circular(50)),
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.vertical(top: Radius.circular(50)),
-              ),
-            ),
-          ),
-        ),
+        MyBottomSheet(),
       ]),
     );
   }
