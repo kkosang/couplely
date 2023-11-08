@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
+    return DefaultTabController(
         length: 3,
         child: Scaffold(
           body: TabBarView(
@@ -28,18 +28,21 @@ class _HomeState extends State<Home> {
               Tab(
                 icon: Icon(
                   Icons.circle_outlined,
+                  color: Colors.red.shade200,
                   size: 40,
                 ),
               ),
               Tab(
                 icon: Icon(
                   Icons.calendar_month,
+                  color: Colors.red.shade200,
                   size: 40,
                 ),
               ),
               Tab(
                 icon: Icon(
                   Icons.menu_rounded,
+                  color: Colors.red.shade200,
                   size: 40,
                 ),
               ),

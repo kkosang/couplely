@@ -75,7 +75,7 @@ class _MyBottomSheetState extends State<MyBottomSheet> {
                 }
               }),
               child: AnimatedContainer(
-                curve: Curves.fastEaseInToSlowEaseOut,
+                curve: Curves.linear,
                 onEnd: () {
                   if (_longAnimation) {
                     setState(() {
@@ -83,7 +83,7 @@ class _MyBottomSheetState extends State<MyBottomSheet> {
                     });
                   }
                 },
-                duration: const Duration(milliseconds: 1000),
+                duration: const Duration(milliseconds: 200),
                 width: MediaQuery.of(context).size.width,
                 height: _height == 0 ? _lowLimit : _height,
                 child: Scaffold(

@@ -1,6 +1,8 @@
+
 import 'dart:ui';
 
 import 'package:couplely/view/home_pages/BottomSheet.dart';
+import 'package:couplely/view/home_pages/DiaryWritePage.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -17,12 +19,11 @@ class _CalendarPageState extends State<CalendarPage> {
     DateTime.now().month,
     DateTime.now().day,
   );
-  bool floatingEnable = true;
+  bool floatingEnable = false;
   DateTime focusedDay = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       floatingActionButton: Stack(
         children: <Widget>[
@@ -41,7 +42,13 @@ class _CalendarPageState extends State<CalendarPage> {
                   alignment: Alignment(
                       Alignment.bottomRight.x, Alignment.bottomRight.y - 0.2),
                   child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DiaryWritePage()),
+                      );
+                    },
                     tooltip: '다이어리',
                     child: Icon(Icons.book),
                   ))
